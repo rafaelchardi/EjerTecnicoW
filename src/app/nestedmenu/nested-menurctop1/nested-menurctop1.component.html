@@ -1,0 +1,24 @@
+<span (mouseenter)="mouseenter()">
+  <button [matMenuTriggerFor]="menu" mat-menu-item>
+    <mat-icon mat-icon  *ngIf="principal"  > more_vert </mat-icon> 
+     {{titulo | translate}}
+  </button>
+</span>  
+
+<mat-menu #menu="matMenu">
+  <ng-container *ngFor="let opcion of opciones">
+     <button mat-menu-item>
+        <button  mat-menu-item 
+                 *ngIf="opcion.subopciones.length===0" 
+                 (click)="click(opcion)" >
+            {{opcion.name | translate}}
+        </button>
+        <app-nested-menurctop1 *ngIf      = "opcion.subopciones.length>0" 
+                               (onclick)  = "click($event)" 
+                               [opciones] = "opcion.subopciones" 
+                               [titulo]   = "opcion.name" >    
+        </app-nested-menurctop1>
+      </button>
+  </ng-container>
+</mat-menu>
+  

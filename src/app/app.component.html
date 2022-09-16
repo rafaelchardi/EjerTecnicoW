@@ -1,0 +1,65 @@
+   
+  <div class="container text-center" style="margin:20px;">
+      <h1 >
+          {{'Ejercicio técnico' | translate:{'titulo':'Wabi - Rafael Chardí'} }} 
+      </h1>
+
+     <div class="row justify-content-center">
+        <div class="col-4" style="margin-top: 25px; justify-content: space-between; display: flex;"> 
+            <a (click)="onclicIdioma('es')">
+                <img src="../../../assets/flags/es.svg" width="20" height="15"
+                style="margin-right:10px ;">Español</a>
+            <a (click)="onclicIdioma('gb')">
+                <img src="../../../assets/flags/gb.svg" width="20" height="15"
+                style="margin-right:10px ;">English</a>
+            <a (click)="onclicIdioma('ua')">
+                <img src="../../../assets/flags/ua.svg" width="20" height="15"
+                style="margin-right:10px ;">Україна</a>
+        </div>
+     </div>
+      <div class="row" style="margin-top: 25px;">
+          <div class="col-5" [ngClass]="{'anim': promouseenter==='menurctop1'}" style="font-style: italic; border-style: groove">
+                {{'Ejemplo' | translate}} 1
+          </div>
+          <div class="col-2">
+          </div>
+          <div class="col-5" [ngClass]="{'anim': promouseenter==='menurct'}" style="font-style: italic;border-style: groove;">
+            {{'Ejemplo' | translate }} 2
+          </div>
+      </div>
+      
+      <div class="row" style="margin-top: 30px">
+          <div class="col-5">
+                <app-nested-menurctop1 (onmouseenter)="onmouseenter();promouseenter='menurctop1'"
+                                       (onmouseout)="promouseenter=''"
+                                       (onclick)="onclick($event,'app-nested-menurctop1')" 
+                                       [principal] = true 
+                                       [opciones] = "opMenu" 
+                                       [titulo]="'Menu'">
+                </app-nested-menurctop1>
+          </div>
+          <div class="col-2">
+          </div>
+          <div class="col-5">
+                <app-nested-menurct (onmouseenter)="onmouseenter();promouseenter='menurct'"
+                                    (onmouseout)="promouseenter=''"
+                                    (onclick)="onclick($event,'app-nested-menurt')" 
+                                    [principal] = true 
+                                    [opciones] = "opMenu" >
+                </app-nested-menurct>
+          </div>
+      </div>    
+          
+      <div class="row" style="margin-top: 50px">
+        
+          <div  *ngIf="!opMenuSeleccionado" style="margin-top: 30px;font-style: italic;animation:aniopcity 2.5s">
+              {{'Aquí te mostrare la ultima opción seleccionada' | translate}}
+          </div>
+          <div *ngIf="opMenuSeleccionado"  style="margin-top: 10px" >
+              <p> {{'Componente' | translate}} : {{this.procedencia}} </p>
+              <p> Id  : {{opMenuSeleccionado.id}} </p>
+              <p> {{'Nombre' | translate}} : {{opMenuSeleccionado.name}} </p>
+              <p *ngIf="opMenuSeleccionado.parentId" > {{'Padre' | translate}} : {{opMenuSeleccionado.parentId}} </p>
+          </div>
+      </div>
+  </div>

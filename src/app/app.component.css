@@ -1,0 +1,20 @@
+@keyframes aniopcity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .anim{
+    animation-name: anim;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes anim{
+    0% {background-color: white;} /*Amarillo*/
+   50% {background-color: rgb(246, 216, 182);} /*Otra vez naranja*/
+  100% {background-color: white;} /*Otra vez amarillo*/
+ }
+ 
