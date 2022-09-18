@@ -9,15 +9,15 @@
   <ng-container *ngFor="let opcion of opciones">
      <button mat-menu-item>
         <button  mat-menu-item 
-                 *ngIf="opcion.subopciones.length===0" 
+                 *ngIf="opcion.children.length===0" 
                  (click)="click(opcion)" >
             {{opcion.name | translate}}
         </button>
-        <app-nested-menurctop1 *ngIf      = "opcion.subopciones.length>0" 
+        <app-nested-menu *ngIf      = "opcion.children.length>0" 
                                (onclick)  = "click($event)" 
-                               [opciones] = "opcion.subopciones" 
+                               [opciones] = "opcion.children" 
                                [titulo]   = "opcion.name" >    
-        </app-nested-menurctop1>
+        </app-nested-menu>
       </button>
   </ng-container>
 </mat-menu>

@@ -7,14 +7,12 @@ import { TranslateModule } from '@ngx-translate/core';
 
 
 /////////////////////-----------------------------------------------------------------------------------
-import { NestedMenurctComponent } from './nested-menurct/nested-menurct.component';
-import { NestedMenurctop1Component } from './nested-menurctop1/nested-menurctop1.component';
+import { NestedMenuComponent } from './nested-menu/nested-menur.component';
 
 
 @NgModule({
   declarations: [
-    NestedMenurctComponent,
-    NestedMenurctop1Component
+    NestedMenuComponent,
   ],
   imports: [
     CommonModule,
@@ -24,8 +22,8 @@ import { NestedMenurctop1Component } from './nested-menurctop1/nested-menurctop1
     TranslateModule
   ],
   exports:[
-    NestedMenurctComponent,
-    NestedMenurctop1Component
+    NestedMenuComponent,
+    
   ],
 
 })

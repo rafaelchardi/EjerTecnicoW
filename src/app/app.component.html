@@ -19,34 +19,35 @@
      </div>
       <div class="row" style="margin-top: 25px;">
           <div class="col-5" [ngClass]="{'anim': promouseenter==='menurctop1'}" style="font-style: italic; border-style: groove">
-                {{'Ejemplo' | translate}} 1
+             <br>
           </div>
           <div class="col-2">
           </div>
           <div class="col-5" [ngClass]="{'anim': promouseenter==='menurct'}" style="font-style: italic;border-style: groove;">
-            {{'Ejemplo' | translate }} 2
+            <br>
           </div>
       </div>
       
       <div class="row" style="margin-top: 30px">
           <div class="col-5">
-                <app-nested-menurctop1 (onmouseenter)="onmouseenter();promouseenter='menurctop1'"
+                <app-nested-menu (onmouseenter)="onmouseenter();promouseenter='menurctop1'"
                                        (onmouseout)="promouseenter=''"
                                        (onclick)="onclick($event,'app-nested-menurctop1')" 
                                        [principal] = true 
                                        [opciones] = "opMenu" 
-                                       [titulo]="'Menu'">
-                </app-nested-menurctop1>
+                                       [titulo]="'Menu 1'">
+                </app-nested-menu>
           </div>
           <div class="col-2">
           </div>
           <div class="col-5">
-                <app-nested-menurct (onmouseenter)="onmouseenter();promouseenter='menurct'"
+                <app-nested-menu (onmouseenter)="onmouseenter();promouseenter='menurct'"
                                     (onmouseout)="promouseenter=''"
                                     (onclick)="onclick($event,'app-nested-menurt')" 
                                     [principal] = true 
-                                    [opciones] = "opMenu" >
-                </app-nested-menurct>
+                                    [opciones] = "opMenu" 
+                                    [titulo]="'Menu 2'">
+                </app-nested-menu>
           </div>
       </div>    
           
