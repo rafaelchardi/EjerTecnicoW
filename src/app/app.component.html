@@ -17,6 +17,14 @@
                 style="margin-right:10px ;">Україна</a>
         </div>
      </div>
+
+
+     <mat-slide-toggle (change) ='toggleChanges($event)' style="font-size: 22px;color: red;  margin-top:20px ;">{{'Recibir el menu por socket' | translate}}</mat-slide-toggle>
+     <div  *ngIf="actualizado" style="margin-top: 30px;font-style: italic;animation:animsocket 2.5s">
+        {{'El menu fue actualizado desde el socket' | translate}}
+     </div>
+
+
       <div class="row" style="margin-top: 25px;">
           <div class="col-5" [ngClass]="{'anim': promouseenter==='menurctop1'}" style="font-style: italic; border-style: groove">
              <br>
@@ -27,6 +35,7 @@
             <br>
           </div>
       </div>
+      
       
       <div class="row" style="margin-top: 30px">
           <div class="col-5">

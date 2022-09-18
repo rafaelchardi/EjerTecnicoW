@@ -19,5 +19,7 @@
  "Jugos":"соки",
  "Energizantes":"Енерджайзери",
  "Fruta":"фрукти",
- "Sin grasa":"без жируa"
+ "Sin grasa":"без жируa",
+ "El menu fue actualizado desde el socket":"Меню оновлено з розетки",
+ "Recibir el menu por socket":"Отримайте меню через розетку"
  }

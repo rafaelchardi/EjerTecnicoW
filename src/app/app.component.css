@@ -13,8 +13,8 @@
   }
 
   @keyframes anim{
-    0% {background-color: white;} /*Amarillo*/
-   50% {background-color: rgb(246, 216, 182);} /*Otra vez naranja*/
-  100% {background-color: white;} /*Otra vez amarillo*/
+    0% {background-color: white;}
+   50% {background-color: rgb(246, 216, 182);} 
+  100% {background-color: white;} 
  }
  

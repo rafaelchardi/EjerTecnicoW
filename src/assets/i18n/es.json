@@ -7,6 +7,7 @@
  "Padre":"Padre",
  "Menu":"Menu",
  "Menu 1":"Menu 1",
+ "Menu 2":"Menu 2",
  "Bebidas":"Bebidas",
  "Comidas":"Comidas",
  "Limpieza":"Limpieza",
@@ -18,5 +19,7 @@
  "Jugos":"Jugos",
  "Energizantes":"Energizantes",
  "Fruta":"Fruta",
- "Sin grasa":"Sin grasa"
+ "Sin grasa":"Sin grasa",
+ "El menu fue actualizado desde el socket":"El menu fue actualizado desde el socket",
+ "Recibir el menu por socket":"Recibir el menu por socket"
  }

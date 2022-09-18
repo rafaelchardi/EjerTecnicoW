@@ -19,5 +19,7 @@
  "Jugos":"juices",
  "Energizantes":"Energizers",
  "Fruta":"Fruit",
- "Sin grasa":"No fata"
+ "Sin grasa":"No fata",
+ "El menu fue actualizado desde el socket":"El menu fue actualizado desde el socket",
+ "Recibir el menu por socket":"Receive the menu by socket"
  }
